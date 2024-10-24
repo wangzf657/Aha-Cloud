@@ -1,0 +1,2 @@
+com.aha.common.log.service.AsyncLogService
+com.aha.common.log.aspect.LogAspect

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.aha</groupId>
+        <artifactId>aha-common</artifactId>
+        <version>3.6.4</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>aha-common-security</artifactId>
+
+    <description>
+        aha-common-security安全模块
+    </description>
+
+    <dependencies>
+
+        <!-- Spring Web -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!-- aha Api System -->
+        <dependency>
+            <groupId>com.aha</groupId>
+            <artifactId>aha-api-system</artifactId>
+        </dependency>
+
+        <!-- aha Common Redis-->
+        <dependency>
+            <groupId>com.aha</groupId>
+            <artifactId>aha-common-redis</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

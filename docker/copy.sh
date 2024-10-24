@@ -14,28 +14,28 @@ cp ../sql/ry_config_20240902.sql ./mysql/db
 
 # copy html
 echo "begin copy html "
-cp -r ../ruoyi-ui/dist/** ./nginx/html/dist
+cp -r ../aha-ui/dist/** ./nginx/html/dist
 
 
 # copy jar
-echo "begin copy ruoyi-gateway "
-cp ../ruoyi-gateway/target/ruoyi-gateway.jar ./ruoyi/gateway/jar
+echo "begin copy aha-gateway "
+cp ../aha-gateway/target/aha-gateway.jar ./aha/gateway/jar
 
-echo "begin copy ruoyi-auth "
-cp ../ruoyi-auth/target/ruoyi-auth.jar ./ruoyi/auth/jar
+echo "begin copy aha-auth "
+cp ../aha-auth/target/aha-auth.jar ./aha/auth/jar
 
-echo "begin copy ruoyi-visual "
-cp ../ruoyi-visual/ruoyi-monitor/target/ruoyi-visual-monitor.jar  ./ruoyi/visual/monitor/jar
+echo "begin copy aha-visual "
+cp ../aha-visual/aha-monitor/target/aha-visual-monitor.jar  ./aha/visual/monitor/jar
 
-echo "begin copy ruoyi-modules-system "
-cp ../ruoyi-modules/ruoyi-system/target/ruoyi-modules-system.jar ./ruoyi/modules/system/jar
+echo "begin copy aha-modules-system "
+cp ../aha-modules/aha-system/target/aha-modules-system.jar ./aha/modules/system/jar
 
-echo "begin copy ruoyi-modules-file "
-cp ../ruoyi-modules/ruoyi-file/target/ruoyi-modules-file.jar ./ruoyi/modules/file/jar
+echo "begin copy aha-modules-file "
+cp ../aha-modules/aha-file/target/aha-modules-file.jar ./aha/modules/file/jar
 
-echo "begin copy ruoyi-modules-job "
-cp ../ruoyi-modules/ruoyi-job/target/ruoyi-modules-job.jar ./ruoyi/modules/job/jar
+echo "begin copy aha-modules-job "
+cp ../aha-modules/aha-job/target/aha-modules-job.jar ./aha/modules/job/jar
 
-echo "begin copy ruoyi-modules-gen "
-cp ../ruoyi-modules/ruoyi-gen/target/ruoyi-modules-gen.jar ./ruoyi/modules/gen/jar
+echo "begin copy aha-modules-gen "
+cp ../aha-modules/aha-gen/target/aha-modules-gen.jar ./aha/modules/gen/jar
 

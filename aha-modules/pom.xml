@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.aha</groupId>
+        <artifactId>aha</artifactId>
+        <version>3.6.4</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <modules>
+        <module>aha-modules-system</module>
+        <module>aha-modules-gen</module>
+        <module>aha-modules-job</module>
+        <module>aha-modules-file</module>
+    </modules>
+
+    <artifactId>aha-modules</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        aha-modules业务模块
+    </description>
+
+</project>
