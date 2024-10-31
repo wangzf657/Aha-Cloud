@@ -15,7 +15,7 @@
         aha-common-swagger系统接口
     </description>
 
-	<dependencies>
+    <dependencies>
 
         <!-- SpringBoot Web -->
         <dependency>
@@ -29,5 +29,5 @@
             <artifactId>springdoc-openapi-ui</artifactId>
         </dependency>
 
-	</dependencies>
+    </dependencies>
 </project>

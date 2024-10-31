@@ -1,29 +1,28 @@
 package com.aha.common.security.utils;
 
-import java.util.Collection;
-import java.util.List;
-import com.alibaba.fastjson2.JSONArray;
 import com.aha.common.core.constant.CacheConstants;
 import com.aha.common.core.utils.SpringUtils;
 import com.aha.common.core.utils.StringUtils;
 import com.aha.common.redis.service.RedisService;
 import com.aha.system.api.domain.SysDictData;
+import com.alibaba.fastjson2.JSONArray;
+
+import java.util.Collection;
+import java.util.List;
 
 /**
  * 字典工具类
  *
  * @author aha
  */
-public class DictUtils
-{
+public class DictUtils {
     /**
      * 设置字典缓存
      *
-     * @param key 参数键
+     * @param key       参数键
      * @param dictDatas 字典数据列表
      */
-    public static void setDictCache(String key, List<SysDictData> dictDatas)
-    {
+    public static void setDictCache(String key, List<SysDictData> dictDatas) {
         SpringUtils.getBean(RedisService.class).setCacheObject(getCacheKey(key), dictDatas);
     }
 
@@ -33,11 +32,10 @@ public class DictUtils
      * @param key 参数键
      * @return dictDatas 字典数据列表
      */
-    public static List<SysDictData> getDictCache(String key)
-    {
-        JSONArray arrayCache = SpringUtils.getBean(RedisService.class).getCacheObject(getCacheKey(key));
-        if (StringUtils.isNotNull(arrayCache))
-        {
+    public static List<SysDictData> getDictCache(String key) {
+        JSONArray arrayCache =
+                SpringUtils.getBean(RedisService.class).getCacheObject(getCacheKey(key));
+        if (StringUtils.isNotNull(arrayCache)) {
             return arrayCache.toList(SysDictData.class);
         }
         return null;
@@ -48,17 +46,16 @@ public class DictUtils
      *
      * @param key 字典键
      */
-    public static void removeDictCache(String key)
-    {
+    public static void removeDictCache(String key) {
         SpringUtils.getBean(RedisService.class).deleteObject(getCacheKey(key));
     }
 
     /**
      * 清空字典缓存
      */
-    public static void clearDictCache()
-    {
-        Collection<String> keys = SpringUtils.getBean(RedisService.class).keys(CacheConstants.SYS_DICT_KEY + "*");
+    public static void clearDictCache() {
+        Collection<String> keys =
+                SpringUtils.getBean(RedisService.class).keys(CacheConstants.SYS_DICT_KEY + "*");
         SpringUtils.getBean(RedisService.class).deleteObject(keys);
     }
 
@@ -68,8 +65,7 @@ public class DictUtils
      * @param configKey 参数键
      * @return 缓存键key
      */
-    public static String getCacheKey(String configKey)
-    {
+    public static String getCacheKey(String configKey) {
         return CacheConstants.SYS_DICT_KEY + configKey;
     }
 }

@@ -1,15 +1,15 @@
 package com.aha.system.mapper;
 
-import java.util.List;
 import com.aha.system.api.domain.SysOperLog;
+
+import java.util.List;
 
 /**
  * 操作日志 数据层
  *
  * @author aha
  */
-public interface SysOperLogMapper
-{
+public interface SysOperLogMapper {
     /**
      * 新增操作日志
      *

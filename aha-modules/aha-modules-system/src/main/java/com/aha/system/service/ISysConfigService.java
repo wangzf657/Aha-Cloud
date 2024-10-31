@@ -1,15 +1,15 @@
 package com.aha.system.service;
 
-import java.util.List;
 import com.aha.system.domain.SysConfig;
+
+import java.util.List;
 
 /**
  * 参数配置 服务层
  *
  * @author aha
  */
-public interface ISysConfigService
-{
+public interface ISysConfigService {
     /**
      * 查询参数配置信息
      *

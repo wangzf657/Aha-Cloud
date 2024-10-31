@@ -1,15 +1,15 @@
 package com.aha.system.mapper;
 
-import java.util.List;
 import com.aha.system.api.domain.SysRole;
+
+import java.util.List;
 
 /**
  * 角色表 数据层
  *
  * @author aha
  */
-public interface SysRoleMapper
-{
+public interface SysRoleMapper {
     /**
      * 根据条件分页查询角色数据
      *

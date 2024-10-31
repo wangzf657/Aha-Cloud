@@ -5,8 +5,7 @@ package com.aha.common.core.constant;
  *
  * @author aha
  */
-public class HttpStatus
-{
+public class HttpStatus {
     /**
      * 操作成功
      */

@@ -1,16 +1,16 @@
 package com.aha.system.mapper;
 
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 import com.aha.system.api.domain.SysUser;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * 用户表 数据层
  *
  * @author aha
  */
-public interface SysUserMapper
-{
+public interface SysUserMapper {
     /**
      * 根据条件分页查询用户列表
      *
@@ -71,10 +71,11 @@ public interface SysUserMapper
      * 修改用户头像
      *
      * @param userName 用户名
-     * @param avatar 头像地址
+     * @param avatar   头像地址
      * @return 结果
      */
-    public int updateUserAvatar(@Param("userName") String userName, @Param("avatar") String avatar);
+    public int updateUserAvatar(@Param("userName") String userName, @Param(
+            "avatar") String avatar);
 
     /**
      * 重置用户密码
@@ -83,7 +84,8 @@ public interface SysUserMapper
      * @param password 密码
      * @return 结果
      */
-    public int resetUserPwd(@Param("userName") String userName, @Param("password") String password);
+    public int resetUserPwd(@Param("userName") String userName, @Param(
+            "password") String password);
 
     /**
      * 通过用户ID删除用户

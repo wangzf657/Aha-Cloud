@@ -1,15 +1,15 @@
 package com.aha.system.mapper;
 
-import java.util.List;
 import com.aha.system.domain.SysNotice;
+
+import java.util.List;
 
 /**
  * 通知公告表 数据层
  *
  * @author aha
  */
-public interface SysNoticeMapper
-{
+public interface SysNoticeMapper {
     /**
      * 查询公告信息
      *

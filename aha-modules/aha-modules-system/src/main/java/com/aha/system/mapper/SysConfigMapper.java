@@ -1,15 +1,15 @@
 package com.aha.system.mapper;
 
-import java.util.List;
 import com.aha.system.domain.SysConfig;
+
+import java.util.List;
 
 /**
  * 参数配置 数据层
  *
  * @author aha
  */
-public interface SysConfigMapper
-{
+public interface SysConfigMapper {
     /**
      * 查询参数配置信息
      *

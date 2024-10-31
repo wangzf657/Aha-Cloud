@@ -5,8 +5,7 @@ package com.aha.common.core.constant;
  *
  * @author aha
  */
-public class ServiceNameConstants
-{
+public class ServiceNameConstants {
     /**
      * 认证服务的serviceid
      */

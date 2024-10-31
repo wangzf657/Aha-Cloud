@@ -1,15 +1,15 @@
 package com.aha.system.mapper;
 
-import java.util.List;
 import com.aha.system.api.domain.SysDictType;
+
+import java.util.List;
 
 /**
  * 字典表 数据层
  *
  * @author aha
  */
-public interface SysDictTypeMapper
-{
+public interface SysDictTypeMapper {
     /**
      * 根据条件分页查询字典类型
      *

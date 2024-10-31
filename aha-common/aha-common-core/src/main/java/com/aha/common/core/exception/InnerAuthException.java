@@ -5,12 +5,10 @@ package com.aha.common.core.exception;
  *
  * @author aha
  */
-public class InnerAuthException extends RuntimeException
-{
+public class InnerAuthException extends RuntimeException {
     private static final long serialVersionUID = 1L;
 
-    public InnerAuthException(String message)
-    {
+    public InnerAuthException(String message) {
         super(message);
     }
 }

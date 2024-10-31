@@ -1,15 +1,15 @@
 package com.aha.system.mapper;
 
-import java.util.List;
 import com.aha.system.domain.SysUserPost;
+
+import java.util.List;
 
 /**
  * 用户与岗位关联表 数据层
  *
  * @author aha
  */
-public interface SysUserPostMapper
-{
+public interface SysUserPostMapper {
     /**
      * 通过用户ID删除用户和岗位关联
      *

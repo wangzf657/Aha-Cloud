@@ -5,12 +5,10 @@ package com.aha.common.core.exception.auth;
  *
  * @author aha
  */
-public class NotLoginException extends RuntimeException
-{
+public class NotLoginException extends RuntimeException {
     private static final long serialVersionUID = 1L;
 
-    public NotLoginException(String message)
-    {
+    public NotLoginException(String message) {
         super(message);
     }
 }

@@ -5,8 +5,7 @@ package com.aha.common.core.constant;
  *
  * @author aha
  */
-public class SecurityConstants
-{
+public class SecurityConstants {
     /**
      * 用户ID字段
      */

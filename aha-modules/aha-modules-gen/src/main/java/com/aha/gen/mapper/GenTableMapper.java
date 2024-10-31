@@ -1,15 +1,15 @@
 package com.aha.gen.mapper;
 
-import java.util.List;
 import com.aha.gen.domain.GenTable;
+
+import java.util.List;
 
 /**
  * 业务 数据层
  *
  * @author aha
  */
-public interface GenTableMapper
-{
+public interface GenTableMapper {
     /**
      * 查询业务列表
      *

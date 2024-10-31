@@ -1,11 +1,12 @@
 package com.aha.system.service.impl;
 
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import com.aha.system.api.domain.SysOperLog;
 import com.aha.system.mapper.SysOperLogMapper;
 import com.aha.system.service.ISysOperLogService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * 操作日志 服务层处理
@@ -13,8 +14,7 @@ import com.aha.system.service.ISysOperLogService;
  * @author aha
  */
 @Service
-public class SysOperLogServiceImpl implements ISysOperLogService
-{
+public class SysOperLogServiceImpl implements ISysOperLogService {
     @Autowired
     private SysOperLogMapper operLogMapper;
 
@@ -25,8 +25,7 @@ public class SysOperLogServiceImpl implements ISysOperLogService
      * @return 结果
      */
     @Override
-    public int insertOperlog(SysOperLog operLog)
-    {
+    public int insertOperlog(SysOperLog operLog) {
         return operLogMapper.insertOperlog(operLog);
     }
 
@@ -37,8 +36,7 @@ public class SysOperLogServiceImpl implements ISysOperLogService
      * @return 操作日志集合
      */
     @Override
-    public List<SysOperLog> selectOperLogList(SysOperLog operLog)
-    {
+    public List<SysOperLog> selectOperLogList(SysOperLog operLog) {
         return operLogMapper.selectOperLogList(operLog);
     }
 
@@ -49,8 +47,7 @@ public class SysOperLogServiceImpl implements ISysOperLogService
      * @return 结果
      */
     @Override
-    public int deleteOperLogByIds(Long[] operIds)
-    {
+    public int deleteOperLogByIds(Long[] operIds) {
         return operLogMapper.deleteOperLogByIds(operIds);
     }
 
@@ -61,8 +58,7 @@ public class SysOperLogServiceImpl implements ISysOperLogService
      * @return 操作日志对象
      */
     @Override
-    public SysOperLog selectOperLogById(Long operId)
-    {
+    public SysOperLog selectOperLogById(Long operId) {
         return operLogMapper.selectOperLogById(operId);
     }
 
@@ -70,8 +66,7 @@ public class SysOperLogServiceImpl implements ISysOperLogService
      * 清空操作日志
      */
     @Override
-    public void cleanOperLog()
-    {
+    public void cleanOperLog() {
         operLogMapper.cleanOperLog();
     }
 }

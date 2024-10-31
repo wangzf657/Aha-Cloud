@@ -1,15 +1,15 @@
 package com.aha.system.mapper;
 
-import java.util.List;
 import com.aha.system.domain.SysRoleDept;
+
+import java.util.List;
 
 /**
  * 角色与部门关联表 数据层
  *
  * @author aha
  */
-public interface SysRoleDeptMapper
-{
+public interface SysRoleDeptMapper {
     /**
      * 通过角色ID删除角色和部门关联
      *

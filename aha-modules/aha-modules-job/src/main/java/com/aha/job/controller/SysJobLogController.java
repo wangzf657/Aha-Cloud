@@ -1,14 +1,5 @@
 package com.aha.job.controller;
 
-import java.util.List;
-import javax.servlet.http.HttpServletResponse;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import com.aha.common.core.utils.poi.ExcelUtil;
 import com.aha.common.core.web.controller.BaseController;
 import com.aha.common.core.web.domain.AjaxResult;
@@ -18,6 +9,11 @@ import com.aha.common.log.enums.BusinessType;
 import com.aha.common.security.annotation.RequiresPermissions;
 import com.aha.job.domain.SysJobLog;
 import com.aha.job.service.ISysJobLogService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /**
  * 调度日志操作处理
@@ -26,8 +22,7 @@ import com.aha.job.service.ISysJobLogService;
  */
 @RestController
 @RequestMapping("/job/log")
-public class SysJobLogController extends BaseController
-{
+public class SysJobLogController extends BaseController {
     @Autowired
     private ISysJobLogService jobLogService;
 
@@ -36,8 +31,7 @@ public class SysJobLogController extends BaseController
      */
     @RequiresPermissions("monitor:job:list")
     @GetMapping("/list")
-    public TableDataInfo list(SysJobLog sysJobLog)
-    {
+    public TableDataInfo list(SysJobLog sysJobLog) {
         startPage();
         List<SysJobLog> list = jobLogService.selectJobLogList(sysJobLog);
         return getDataTable(list);
@@ -49,8 +43,7 @@ public class SysJobLogController extends BaseController
     @RequiresPermissions("monitor:job:export")
     @Log(title = "任务调度日志", businessType = BusinessType.EXPORT)
     @PostMapping("/export")
-    public void export(HttpServletResponse response, SysJobLog sysJobLog)
-    {
+    public void export(HttpServletResponse response, SysJobLog sysJobLog) {
         List<SysJobLog> list = jobLogService.selectJobLogList(sysJobLog);
         ExcelUtil<SysJobLog> util = new ExcelUtil<SysJobLog>(SysJobLog.class);
         util.exportExcel(response, list, "调度日志");
@@ -61,8 +54,7 @@ public class SysJobLogController extends BaseController
      */
     @RequiresPermissions("monitor:job:query")
     @GetMapping(value = "/{jobLogId}")
-    public AjaxResult getInfo(@PathVariable Long jobLogId)
-    {
+    public AjaxResult getInfo(@PathVariable Long jobLogId) {
         return success(jobLogService.selectJobLogById(jobLogId));
     }
 
@@ -72,8 +64,7 @@ public class SysJobLogController extends BaseController
     @RequiresPermissions("monitor:job:remove")
     @Log(title = "定时任务调度日志", businessType = BusinessType.DELETE)
     @DeleteMapping("/{jobLogIds}")
-    public AjaxResult remove(@PathVariable Long[] jobLogIds)
-    {
+    public AjaxResult remove(@PathVariable Long[] jobLogIds) {
         return toAjax(jobLogService.deleteJobLogByIds(jobLogIds));
     }
 
@@ -83,8 +74,7 @@ public class SysJobLogController extends BaseController
     @RequiresPermissions("monitor:job:remove")
     @Log(title = "调度日志", businessType = BusinessType.CLEAN)
     @DeleteMapping("/clean")
-    public AjaxResult clean()
-    {
+    public AjaxResult clean() {
         jobLogService.cleanJobLog();
         return success();
     }

@@ -1,15 +1,15 @@
 package com.aha.gen.service;
 
-import java.util.List;
 import com.aha.gen.domain.GenTableColumn;
+
+import java.util.List;
 
 /**
  * 业务字段 服务层
  *
  * @author aha
  */
-public interface IGenTableColumnService
-{
+public interface IGenTableColumnService {
     /**
      * 查询业务字段列表
      *

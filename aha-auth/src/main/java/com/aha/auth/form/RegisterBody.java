@@ -5,7 +5,6 @@ package com.aha.auth.form;
  *
  * @author aha
  */
-public class RegisterBody extends LoginBody
-{
+public class RegisterBody extends LoginBody {
 
 }

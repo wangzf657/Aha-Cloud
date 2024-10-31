@@ -1,16 +1,16 @@
 package com.aha.system.service;
 
-import java.util.List;
 import com.aha.system.api.domain.SysDept;
 import com.aha.system.domain.vo.TreeSelect;
+
+import java.util.List;
 
 /**
  * 部门管理 服务层
  *
  * @author aha
  */
-public interface ISysDeptService
-{
+public interface ISysDeptService {
     /**
      * 查询部门管理数据
      *

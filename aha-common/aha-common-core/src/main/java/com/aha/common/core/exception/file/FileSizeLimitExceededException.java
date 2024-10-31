@@ -5,12 +5,11 @@ package com.aha.common.core.exception.file;
  *
  * @author aha
  */
-public class FileSizeLimitExceededException extends FileException
-{
+public class FileSizeLimitExceededException extends FileException {
     private static final long serialVersionUID = 1L;
 
-    public FileSizeLimitExceededException(long defaultMaxSize)
-    {
-        super("upload.exceed.maxSize", new Object[] { defaultMaxSize }, "the filesize is too large");
+    public FileSizeLimitExceededException(long defaultMaxSize) {
+        super("upload.exceed.maxSize", new Object[]{defaultMaxSize},
+                "the " + "filesize is too large");
     }
 }

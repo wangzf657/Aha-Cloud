@@ -1,15 +1,15 @@
 package com.aha.job.mapper;
 
-import java.util.List;
 import com.aha.job.domain.SysJob;
+
+import java.util.List;
 
 /**
  * 调度任务信息 数据层
  *
  * @author aha
  */
-public interface SysJobMapper
-{
+public interface SysJobMapper {
     /**
      * 查询调度任务日志集合
      *

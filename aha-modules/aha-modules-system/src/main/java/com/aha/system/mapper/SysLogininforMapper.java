@@ -1,15 +1,15 @@
 package com.aha.system.mapper;
 
-import java.util.List;
 import com.aha.system.api.domain.SysLogininfor;
+
+import java.util.List;
 
 /**
  * 系统访问日志情况信息 数据层
  *
  * @author aha
  */
-public interface SysLogininforMapper
-{
+public interface SysLogininforMapper {
     /**
      * 新增系统登录日志
      *

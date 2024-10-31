@@ -1,17 +1,17 @@
 package com.aha.job.service;
 
-import java.util.List;
-import org.quartz.SchedulerException;
 import com.aha.common.core.exception.job.TaskException;
 import com.aha.job.domain.SysJob;
+import org.quartz.SchedulerException;
+
+import java.util.List;
 
 /**
  * 定时任务调度信息信息 服务层
  *
  * @author aha
  */
-public interface ISysJobService
-{
+public interface ISysJobService {
     /**
      * 获取quartz调度器的计划任务
      *

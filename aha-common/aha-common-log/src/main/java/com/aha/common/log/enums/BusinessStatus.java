@@ -4,10 +4,8 @@ package com.aha.common.log.enums;
  * 操作状态
  *
  * @author aha
- *
  */
-public enum BusinessStatus
-{
+public enum BusinessStatus {
     /**
      * 成功
      */

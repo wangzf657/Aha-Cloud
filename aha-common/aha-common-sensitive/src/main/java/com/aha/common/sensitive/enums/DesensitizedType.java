@@ -1,15 +1,15 @@
 package com.aha.common.sensitive.enums;
 
-import java.util.function.Function;
 import com.aha.common.sensitive.utils.DesensitizedUtil;
+
+import java.util.function.Function;
 
 /**
  * 脱敏类型
  *
  * @author aha
  */
-public enum DesensitizedType
-{
+public enum DesensitizedType {
     /**
      * 姓名，第2位星号替换
      */
@@ -23,7 +23,8 @@ public enum DesensitizedType
     /**
      * 身份证，中间10位星号替换
      */
-    ID_CARD(s -> s.replaceAll("(\\d{4})\\d{10}(\\d{3}[Xx]|\\d{4})", "$1** **** ****$2")),
+    ID_CARD(s -> s.replaceAll("(\\d{4})\\d{10}(\\d{3}[Xx]|\\d{4})",
+            "$1** " + "**** ****$2")),
 
     /**
      * 手机号，中间4位星号替换
@@ -47,13 +48,11 @@ public enum DesensitizedType
 
     private final Function<String, String> desensitizer;
 
-    DesensitizedType(Function<String, String> desensitizer)
-    {
+    DesensitizedType(Function<String, String> desensitizer) {
         this.desensitizer = desensitizer;
     }
 
-    public Function<String, String> desensitizer()
-    {
+    public Function<String, String> desensitizer() {
         return desensitizer;
     }
 }

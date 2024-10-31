@@ -1,11 +1,11 @@
 package com.aha.common.log.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Service;
 import com.aha.common.core.constant.SecurityConstants;
 import com.aha.system.api.RemoteLogService;
 import com.aha.system.api.domain.SysOperLog;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Service;
 
 /**
  * 异步调用日志服务
@@ -13,8 +13,7 @@ import com.aha.system.api.domain.SysOperLog;
  * @author aha
  */
 @Service
-public class AsyncLogService
-{
+public class AsyncLogService {
     @Autowired
     private RemoteLogService remoteLogService;
 
@@ -22,8 +21,7 @@ public class AsyncLogService
      * 保存系统日志记录
      */
     @Async
-    public void saveSysLog(SysOperLog sysOperLog) throws Exception
-    {
+    public void saveSysLog(SysOperLog sysOperLog) throws Exception {
         remoteLogService.saveLog(sysOperLog, SecurityConstants.INNER);
     }
 }

@@ -1,14 +1,15 @@
 package com.aha.common.security.feign;
 
-import java.util.Map;
-import javax.servlet.http.HttpServletRequest;
-import org.springframework.stereotype.Component;
 import com.aha.common.core.constant.SecurityConstants;
 import com.aha.common.core.utils.ServletUtils;
 import com.aha.common.core.utils.StringUtils;
 import com.aha.common.core.utils.ip.IpUtils;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
+import org.springframework.stereotype.Component;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
  * feign 请求拦截器
@@ -16,35 +17,33 @@ import feign.RequestTemplate;
  * @author aha
  */
 @Component
-public class FeignRequestInterceptor implements RequestInterceptor
-{
+public class FeignRequestInterceptor implements RequestInterceptor {
     @Override
-    public void apply(RequestTemplate requestTemplate)
-    {
+    public void apply(RequestTemplate requestTemplate) {
         HttpServletRequest httpServletRequest = ServletUtils.getRequest();
-        if (StringUtils.isNotNull(httpServletRequest))
-        {
-            Map<String, String> headers = ServletUtils.getHeaders(httpServletRequest);
+        if (StringUtils.isNotNull(httpServletRequest)) {
+            Map<String, String> headers =
+                    ServletUtils.getHeaders(httpServletRequest);
             // 传递用户信息请求头，防止丢失
             String userId = headers.get(SecurityConstants.DETAILS_USER_ID);
-            if (StringUtils.isNotEmpty(userId))
-            {
-                requestTemplate.header(SecurityConstants.DETAILS_USER_ID, userId);
+            if (StringUtils.isNotEmpty(userId)) {
+                requestTemplate.header(SecurityConstants.DETAILS_USER_ID,
+                        userId);
             }
             String userKey = headers.get(SecurityConstants.USER_KEY);
-            if (StringUtils.isNotEmpty(userKey))
-            {
+            if (StringUtils.isNotEmpty(userKey)) {
                 requestTemplate.header(SecurityConstants.USER_KEY, userKey);
             }
             String userName = headers.get(SecurityConstants.DETAILS_USERNAME);
-            if (StringUtils.isNotEmpty(userName))
-            {
-                requestTemplate.header(SecurityConstants.DETAILS_USERNAME, userName);
+            if (StringUtils.isNotEmpty(userName)) {
+                requestTemplate.header(SecurityConstants.DETAILS_USERNAME,
+                        userName);
             }
-            String authentication = headers.get(SecurityConstants.AUTHORIZATION_HEADER);
-            if (StringUtils.isNotEmpty(authentication))
-            {
-                requestTemplate.header(SecurityConstants.AUTHORIZATION_HEADER, authentication);
+            String authentication =
+                    headers.get(SecurityConstants.AUTHORIZATION_HEADER);
+            if (StringUtils.isNotEmpty(authentication)) {
+                requestTemplate.header(SecurityConstants.AUTHORIZATION_HEADER
+                        , authentication);
             }
 
             // 配置客户端IP

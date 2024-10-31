@@ -7,12 +7,10 @@ import com.aha.common.core.exception.base.BaseException;
  *
  * @author aha
  */
-public class FileException extends BaseException
-{
+public class FileException extends BaseException {
     private static final long serialVersionUID = 1L;
 
-    public FileException(String code, Object[] args, String msg)
-    {
+    public FileException(String code, Object[] args, String msg) {
         super("file", code, args, msg);
     }
 

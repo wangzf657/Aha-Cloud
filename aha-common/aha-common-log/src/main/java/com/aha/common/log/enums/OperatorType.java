@@ -5,8 +5,7 @@ package com.aha.common.log.enums;
  *
  * @author aha
  */
-public enum OperatorType
-{
+public enum OperatorType {
     /**
      * 其它
      */

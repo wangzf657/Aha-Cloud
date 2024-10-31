@@ -5,8 +5,7 @@ package com.aha.common.core.constant;
  *
  * @author aha
  */
-public class TokenConstants
-{
+public class TokenConstants {
     /**
      * 令牌自定义标识
      */

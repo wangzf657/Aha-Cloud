@@ -1,16 +1,16 @@
 package com.aha.gen.service;
 
+import com.aha.gen.domain.GenTable;
+
 import java.util.List;
 import java.util.Map;
-import com.aha.gen.domain.GenTable;
 
 /**
  * 业务 服务层
  *
  * @author aha
  */
-public interface IGenTableService
-{
+public interface IGenTableService {
     /**
      * 查询业务列表
      *

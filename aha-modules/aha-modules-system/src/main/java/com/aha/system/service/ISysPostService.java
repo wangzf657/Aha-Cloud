@@ -1,15 +1,15 @@
 package com.aha.system.service;
 
-import java.util.List;
 import com.aha.system.domain.SysPost;
+
+import java.util.List;
 
 /**
  * 岗位信息 服务层
  *
  * @author aha
  */
-public interface ISysPostService
-{
+public interface ISysPostService {
     /**
      * 查询岗位信息集合
      *
